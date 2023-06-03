@@ -13,9 +13,10 @@ export default function request(options) {
 
   try {
     let domain = ''
-    const urlMatch = url.match(/[a-zA-z]+:\/\/[^/]*/)
+    // 如果 url 是 'https://localhost:7050/api/Pictures'，则 urlMatch 为 ["https://localhost:7050"]
+    const urlMatch = url.match(/[a-zA-z]+:\/\/[^/]*/) 
     if (urlMatch) {
-      ;[domain] = urlMatch
+      [domain] = urlMatch
       url = url.slice(domain.length)
     }
 

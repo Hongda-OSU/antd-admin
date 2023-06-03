@@ -53,9 +53,7 @@ class PrimaryLayout extends PureComponent {
     const routeList = store.get('routeList') || []
     const { isMobile } = this.state
     const { onCollapseChange } = this
-
     // Localized route name.
-
     const lang = getLocale()
     const newRouteList =
       lang !== 'en'
@@ -67,7 +65,6 @@ class PrimaryLayout extends PureComponent {
             }
           })
         : routeList
-
     // Find a route that matches the pathname.
     const currentRoute = newRouteList.find(
       _ => _.route && pathToRegexp(_.route).exec(location.pathname)

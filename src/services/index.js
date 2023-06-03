@@ -35,4 +35,12 @@ APIFunction.queryWeather = params => {
   })
 }
 
+// GET: api/Pictures (APP)
+APIFunction.queryPictures = params => {
+  return request({
+    url: `${backendApp}/${apiPrefix}/api/Pictures`,
+    data: params,
+  })
+}
+
 export default APIFunction

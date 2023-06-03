@@ -71,7 +71,7 @@ class SiderMenu extends PureComponent {
       isMobile,
       onCollapseChange,
     } = this.props
-
+    
     // Generating tree-structured data for menu content.
     const menuTree = arrayToTree(menus, 'id', 'menuParentId')
 

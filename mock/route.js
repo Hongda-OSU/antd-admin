@@ -15,6 +15,18 @@ const database = [
     route: '/dashboard',
   },
   {
+    id: '6',
+    icon: 'dashboard',
+    name: 'Pictures',
+    zh: {
+      name: '图片'
+    },
+    'pt-br': {
+      name: 'Pictures'
+    },
+    route: '/picture',
+  },
+  {
     id: '2',
     breadcrumbParentId: '1',
     name: 'Users',

@@ -66,6 +66,12 @@ export default {
       changeOrigin: true,
       pathRewrite: { '^/api/v1/weather': '/v3/weather' },
     },
+    // '/picture': {
+    //   target: 'https://localhost:7050',
+    //   changeOrigin: true,
+    //   pathRewrite: { '^/picture': '/api/Pictures' },
+    //   secure: false,
+    // },
   },
   // Theme for antd
   // https://ant.design/docs/react/customize-theme

@@ -3,6 +3,8 @@ module.exports = {
   copyright: 'Ant Design Admin  ©2020 zuiidea',
   logoPath: '/logo.svg',
   apiPrefix: '/api/v1',
+  backendApp: 'https://localhost:7050',
+  backendAuth: 'https://localhost:7001',
   fixedHeader: true, // sticky primary layout header
 
   /* Layout configuration, specify which layout to use for route. */
