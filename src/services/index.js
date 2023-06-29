@@ -1,5 +1,5 @@
 import request from 'utils/request'
-import { apiPrefix } from 'utils/config'
+import { apiPrefix, backendApp } from 'utils/config'
 
 import api from './api'
 
@@ -38,7 +38,7 @@ APIFunction.queryWeather = params => {
 // GET: api/Pictures (APP)
 APIFunction.queryPictures = params => {
   return request({
-    url: `${backendApp}/${apiPrefix}/api/Pictures`,
+    url: `${backendApp}/api/Pictures`,
     data: params,
   })
 }

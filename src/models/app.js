@@ -10,7 +10,7 @@ import { CANCEL_REQUEST_MESSAGE } from 'utils/constant'
 import api from 'api'
 import config from 'config'
 
-const { queryRouteList, logoutUser, queryUserInfo } = api
+const { logoutUser, queryUserInfo } = api
 
 const goDashboard = () => {
   if (pathToRegexp(['/', '/login']).exec(window.location.pathname)) {
@@ -87,16 +87,16 @@ export default {
       const { locationPathname } = yield select(_ => _.app)
       const { success, user } = yield call(queryUserInfo, payload)
       if (success && user) {
-        const { list } = yield call(queryRouteList)
+        // const { list } = yield call(queryRouteList)
         const { permissions } = user
-        let routeList = list
+        let routeList = config.routes
         if (
           permissions.role === ROLE_TYPE.ADMIN ||
           permissions.role === ROLE_TYPE.DEVELOPER
         ) {
           permissions.visit = list.map(item => item.id)
         } else {
-          routeList = list.filter(item => {
+          routeList = config.routes.filter(item => {
             const cases = [
               permissions.visit.includes(item.id),
               item.mpid
